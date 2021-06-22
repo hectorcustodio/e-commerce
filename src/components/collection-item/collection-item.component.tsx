@@ -1,14 +1,11 @@
 import React from 'react'
 import './collection-item.styles.scss'
-import { Item } from '../collection/collection.component'
 import FormButton from '../form-button/form-button.component'
 import { connect } from 'react-redux'
 import { addItem } from '../../redux/cart/cart.actions'
+import { CollectionItemInterface } from '../../model'
 
-interface CollectionItemInterface {
-  item: Item,
-  addItem?: (item:Item) => void
-}
+
 
 
 const CollectionItem = ({ item, addItem }: CollectionItemInterface) => {
