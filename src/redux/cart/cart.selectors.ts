@@ -17,3 +17,8 @@ export const selectCartItemsCount = createSelector(
   )
 
 )
+
+export const selectCartVisibility = createSelector(
+  [selectCart],
+  ({ visible }) => visible || false
+)

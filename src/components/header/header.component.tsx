@@ -6,9 +6,13 @@ import { auth } from '../../firebase/firebase.utils'
 import { connect } from 'react-redux'
 import CartIcon from '../cart-icon/cart-icon.component'
 import CartDropdown from '../cart-dropdown/cart-dropdown.component'
+import { StateInterface } from '../../model/state-interface'
+import { CurrentUser } from '../../model/user.model'
+import { selectCurrentUser } from '../../redux/user/user.selectors'
+import { selectCartVisibility } from '../../redux/cart/cart.selectors'
 
 interface HeaderInterface {
-  currentUser: any,
+  currentUser: CurrentUser,
   hidden: boolean
 }
 
@@ -34,9 +38,9 @@ const Header = ({ currentUser, hidden }: HeaderInterface) => (
   </div>
 )
 
-const mapStateToProps = (state: any) => ({
-  currentUser: state.user.currentUser,
-  hidden: state.cart.visible
+const mapStateToProps = (state: StateInterface) => ({
+  currentUser: selectCurrentUser(state),
+  hidden: selectCartVisibility(state)
 })
 
 export default connect(mapStateToProps)(Header)
