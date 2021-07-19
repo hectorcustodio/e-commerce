@@ -15,6 +15,7 @@ export const addItem = (item: any) => {
 }
 
 export const removeItem = (item: Item) => {
+  
   return {
     type: CartActionTypes.REMOVE_ITEM,
     payload: item
