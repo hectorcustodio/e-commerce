@@ -1,3 +1,4 @@
+import { Item } from "../../model";
 import CartActionTypes from "./cart.types";
 
 export const setVisibility = () => {
@@ -6,9 +7,16 @@ export const setVisibility = () => {
   }
 }
 
-export const addItem = (item:any) =>{
+export const addItem = (item: any) => {
   return {
     type: CartActionTypes.ADD_ITEM,
+    payload: item
+  }
+}
+
+export const removeItem = (item: Item) => {
+  return {
+    type: CartActionTypes.REMOVE_ITEM,
     payload: item
   }
 }

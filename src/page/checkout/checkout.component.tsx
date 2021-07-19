@@ -35,7 +35,7 @@ const CheckoutPage = ({ checkoutItems, totalAmount }: CheckoutPageInterface) => 
     </div>
     {
       checkoutItems.map((cartItem: Item) =>
-       <CheckoutItem key={cartItem.id} {...cartItem} />
+        <CheckoutItem key={cartItem.id} item={cartItem} />
       )
     }
     <div className="total"><span>Total: ${totalAmount}</span></div>
@@ -43,8 +43,8 @@ const CheckoutPage = ({ checkoutItems, totalAmount }: CheckoutPageInterface) => 
 )
 
 const mapStateToProps = (state: StateInterface) => ({
-  cartItems: selectCartItems(state),
-  total: selectCartTotal(state)
+  checkoutItems: selectCartItems(state),
+  totalAmount: selectCartTotal(state)
 })
 
 export default connect(mapStateToProps)(CheckoutPage)
