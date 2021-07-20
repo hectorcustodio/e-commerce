@@ -1,0 +1,15 @@
+# This workflow will do a clean install of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: License Check
+on:
+  pull_request:
+    branches: [ feature/redux-selectors ]
+
+jobs:
+  check-license-lines:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@feature/redux-selectors
+    - name: Check License Lines
+      uses: kt3k/license_checker@v1.0.6
