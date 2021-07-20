@@ -3,13 +3,13 @@
 
 name: License Check
 on:
-  pull_request:
+  push:
     branches: [ feature/redux-selectors ]
 
 jobs:
   check-license-lines:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@feature/redux-selectors
+    - uses: actions/checkout@master
     - name: Check License Lines
       uses: kt3k/license_checker@v1.0.6

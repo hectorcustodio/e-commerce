@@ -10,6 +10,7 @@ import { auth, createUserProfileDocument } from './firebase/firebase.utils'
 import { setCurrentUser } from './redux/user/user.actions'
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { StateInterface } from './model/state-interface';
+import CheckoutPage from './page/checkout/checkout.component';
 
 class App extends React.Component<{ setCurrentUser: any, currentUser: any }, Record<string, any>>{
 
@@ -41,6 +42,7 @@ class App extends React.Component<{ setCurrentUser: any, currentUser: any }, Rec
           <Route exact path='/' component={HomePage} />
           <Route path='/shop' component={ShopPage} />
           <Route exact path='/signin' render={() => this.checkIfLogged()} />
+          <Route exact path='/checkout' component={CheckoutPage} />
         </Switch>
       </div>
     );

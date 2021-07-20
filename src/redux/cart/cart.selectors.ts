@@ -1,3 +1,4 @@
+import { create } from 'node:domain';
 import { createSelector } from 'reselect';
 import { StateInterface } from '../../model/state-interface';
 
@@ -21,4 +22,9 @@ export const selectCartItemsCount = createSelector(
 export const selectCartVisibility = createSelector(
   [selectCart],
   ({ visible }) => visible || false
+)
+
+export const selectCartTotal = createSelector(
+  [selectCartItems],
+  (cartItems) => cartItems.reduce((acc, cartItem) => acc + cartItem.price * cartItem.quantity, 0)
 )
