@@ -15,6 +15,7 @@ const cartReducer = (state: CartInterface = INITIAL_STATE, action: any) => {
       return {
         ...state,
         visible: !state.visible
+        
       }
     case CartActionTypes.ADD_ITEM:
       return {
