@@ -1,3 +1,5 @@
+// Copyright 2021 Hector Augusto Custódio
+
 import { CartInterface } from "../../model"
 import CartActionTypes from "./cart.types"
 import { addItemToCart, removeItemFromCart } from "./cart.utils"
