@@ -28,4 +28,4 @@ jobs:
         cache: 'npm'
     - run: npm install --global yarn
     - run: yarn
-    - run: yarn build
+    - run: CI = '' yarn build
