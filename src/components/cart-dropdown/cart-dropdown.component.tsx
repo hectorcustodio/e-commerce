@@ -31,7 +31,9 @@ const CartDropdown = ({ cartItems, history, setVisibility }: WithRouterCartInter
 }
 
 const mapStateToProps = (state: StateInterface) => {
+
   return { cartItems: selectCartItems(state) }
+  
 }
 
 const mapDispatchToProps = (dispatch: any) => ({
