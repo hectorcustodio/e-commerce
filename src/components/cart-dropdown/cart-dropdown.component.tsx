@@ -23,11 +23,12 @@ const CartDropdown = ({ cartItems, history, setVisibility }: WithRouterCartInter
             <span className='empty-message'>Your cart is empty</span>
         }
       </div>
+      
       <FormButton onClick={() => {
-        
         history.push('/checkout')
         setVisibility()
       }}>GO TO CHECKOUT</FormButton>
+      
     </div>)
 }
 
