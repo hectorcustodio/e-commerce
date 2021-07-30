@@ -11,12 +11,12 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: get current version
-      run: 'echo PACKAGE_VERSION=$(node bin/utils)'
+      run: 'echo PACKAGE_VERSION=$(node bin/utils)>> $GITHUB_ENV'
 
     - name: creates release
       uses: ncipollo/release-action@v1
       with:
-        artifacts: "Initial Release "
         token: ${{ secrets.GITHUB_TOKEN }}
         tag: "v${{ env.PACKAGE_VERSION }}"
         commit: master
+        body: "Initial release"
