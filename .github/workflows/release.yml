@@ -1,5 +1,3 @@
-
-
 name: Release
 
 on:
@@ -18,7 +16,7 @@ jobs:
       run: 'node echo PACKAGE_VERSION=$(node bin/utils)'
 
     - name: creates release
-    - uses: ncipollo/release-action@v1
+      uses: ncipollo/release-action@v1
       with:
         artifacts: "Initial Release "
         token: ${{ secrets.GITHUB_TOKEN }}
