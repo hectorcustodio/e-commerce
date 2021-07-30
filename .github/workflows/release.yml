@@ -1,0 +1,26 @@
+
+
+name: Release
+
+on:
+  push:
+    branches: [master]
+  pull_request: 
+      branches: [master]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: get current version
+      run: 'node echo PACKAGE_VERSION=$(node bin/utils)'
+
+    - name: creates release
+    - uses: ncipollo/release-action@v1
+      with:
+        artifacts: "Initial Release "
+        token: ${{ secrets.GITHUB_TOKEN }}
+        tag: "v${{ env.PACKAGE_VERSION }}"
+        commit: master
