@@ -3,17 +3,24 @@ name: Release
 on:
   push:
     branches: [master]
+  pull_request:
+    branches: [master]
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+      with:
+        ref: master
+      run: 'echo CURRENT_VERSION=$(node bin/utils)>> $GITHUB_ENV'
 
     - name: get current version
+      uses: actions/checkout@v2 
       run: 'echo PACKAGE_VERSION=$(node bin/utils)>> $GITHUB_ENV'
 
     - name: creates release
+      if: ${{env.PACKAGE_VERSION > env.CURRENT_VERSION}}
       uses: ncipollo/release-action@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
