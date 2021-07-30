@@ -13,11 +13,13 @@ jobs:
     - uses: actions/checkout@v2
       with:
         ref: master
+
+    - name: get current version 
       run: 'echo CURRENT_VERSION=$(node bin/utils)>> $GITHUB_ENV'
 
     - uses: actions/checkout@v2 
 
-    - name: get current version
+    - name: get new version
       run: 'echo PACKAGE_VERSION=$(node bin/utils)>> $GITHUB_ENV'
 
     - name: creates release
