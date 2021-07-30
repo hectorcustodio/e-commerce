@@ -15,8 +15,9 @@ jobs:
         ref: master
       run: 'echo CURRENT_VERSION=$(node bin/utils)>> $GITHUB_ENV'
 
+    - uses: actions/checkout@v2 
+
     - name: get current version
-      uses: actions/checkout@v2 
       run: 'echo PACKAGE_VERSION=$(node bin/utils)>> $GITHUB_ENV'
 
     - name: creates release
