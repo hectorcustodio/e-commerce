@@ -2,7 +2,7 @@ name: DCO-CHECK
 on:
   pull_request:
     branches:
-      - main
+      - master
 jobs:
   check:
     runs-on: ubuntu-latest
