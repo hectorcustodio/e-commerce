@@ -12,7 +12,7 @@ const CartIcon = ({ setVisibility, itemCount }: CartIconInterface) => (
   <div className='cart-icon' onClick={setVisibility}>
     <ShoppingIcon className='shopping-icon' />
 
-    
+    ```
     <span className='item-count'>{itemCount || 0}</span>
   </div>
 )
