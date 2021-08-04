@@ -14,7 +14,6 @@ const CartIcon = ({ setVisibility, itemCount }: CartIconInterface) => (
 
     
     <span className='item-count'>{itemCount || 0}</span>
-
   </div>
 )
 
