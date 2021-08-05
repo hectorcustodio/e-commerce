@@ -12,6 +12,8 @@ const CartIcon = ({ setVisibility, itemCount }: CartIconInterface) => (
   <div className='cart-icon' onClick={setVisibility}>
     <ShoppingIcon className='shopping-icon' />
 
+
+
     <span className='item-count'>{itemCount || 0}</span>
 
 
@@ -21,7 +23,7 @@ const CartIcon = ({ setVisibility, itemCount }: CartIconInterface) => (
 const mapStateToProps = (state: StateInterface) => {
   return {
 
-    
+
     itemCount: selectCartItemsCount(state)
   }
 }
