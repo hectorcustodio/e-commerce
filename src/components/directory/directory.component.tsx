@@ -60,9 +60,12 @@ class Directory extends React.Component<{}, myState> {
                         return <MenuItem key={id} linkUrl={linkUrl} title={title.toUpperCase()} imageUrl = {imageUrl} size={size || ''}></MenuItem>
 
 
-                        
+
                     })
                 }
+
+
+                
             </div>
         )
     }
