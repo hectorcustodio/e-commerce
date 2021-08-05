@@ -65,11 +65,7 @@ class Directory extends React.Component<{}, myState> {
 
 
 
-    
+
 }
-
-
-
-
 
 export default Directory;
