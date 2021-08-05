@@ -1,4 +1,3 @@
-git rebase --signoff @~X
 
 
 name: DCO-CHECK
