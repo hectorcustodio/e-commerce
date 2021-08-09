@@ -11,17 +11,27 @@ import { selectCartItemsCount } from '../../redux/cart/cart.selectors'
 const CartIcon = ({ setVisibility, itemCount }: CartIconInterface) => (
   <div className='cart-icon' onClick={setVisibility}>
     <ShoppingIcon className='shopping-icon' />
+
+
+
     <span className='item-count'>{itemCount || 0}</span>
+
+
   </div>
 )
 
 const mapStateToProps = (state: StateInterface) => {
   return {
+
+
     itemCount: selectCartItemsCount(state)
   }
 }
 
 const mapDispatchToProps = (dispatch: any) => ({
+
+
+  
   setVisibility: () => dispatch(setVisibility())
 })
 
