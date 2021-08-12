@@ -15,4 +15,4 @@ jobs:
     - name: Check DCO
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      uses: hectorcustodio/dco-check-action@v1.2
+      uses: hectorcustodio/dco-check-action@main
