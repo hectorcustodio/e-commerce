@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: "Install Action"
-      uses: hectorcustodio/dco-check-action
+      uses: github.com/hectorcustodio/dco-check-action@v1
     - name: Check DCO
       run: dco-check
