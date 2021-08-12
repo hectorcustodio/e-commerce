@@ -9,5 +9,3 @@ jobs:
     steps:
     - name: "Install Action"
       uses: hectorcustodio/dco-check-action@v1.0.4
-    - name: Check DCO
-      run: echo dco-check
