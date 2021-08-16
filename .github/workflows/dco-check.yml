@@ -5,9 +5,10 @@ on:
       - master
 jobs:
   check:
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     runs-on: ubuntu-latest
     container: christophebedard/dco-check
     steps:
     - uses: actions/checkout@v2
     - run: dco-check
-
