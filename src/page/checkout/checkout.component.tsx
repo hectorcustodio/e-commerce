@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 import CheckoutItem from "../../components/checkout-item/checkout-item.component";
-import headerComponent from "../../components/header/header.component";
 import { Item } from "../../model";
 import { StateInterface } from "../../model/state-interface";
 import { selectCartItems, selectCartTotal } from "../../redux/cart/cart.selectors";
