@@ -1,4 +1,3 @@
-import { create } from 'node:domain';
 import { createSelector } from 'reselect';
 import { StateInterface } from '../../model/state-interface';
 
