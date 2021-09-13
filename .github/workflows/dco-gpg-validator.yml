@@ -1,0 +1,13 @@
+name: DCO GPG VALIDATOR
+on:
+  pull_request:
+    types: [opened, reopened]
+    branches: [main]
+
+jobs:
+  verification:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: hectorcustodio/dco-check-action@v2.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
