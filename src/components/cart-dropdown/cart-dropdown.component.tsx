@@ -16,6 +16,7 @@ const CartDropdown = ({ cartItems, history, setVisibility }: WithRouterCartInter
   console.log(cartItems)
   return (
     <div className='cart-dropdown'>
+      
       <div className='cart-items'>
         {
           cartItems.length > 0 ?
@@ -25,6 +26,7 @@ const CartDropdown = ({ cartItems, history, setVisibility }: WithRouterCartInter
       </div>
       
       <FormButton onClick={() => {
+
         history.push('/checkout')
         setVisibility()
       }}>GO TO CHECKOUT</FormButton>
