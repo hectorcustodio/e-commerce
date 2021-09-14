@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  dco/gpg:
+  dco-gpg-validator:
     runs-on: ubuntu-latest
     steps:
       - uses: hectorcustodio/dco-check-action@v2.0
