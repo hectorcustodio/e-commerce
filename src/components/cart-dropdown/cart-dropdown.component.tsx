@@ -41,7 +41,7 @@ const CartDropdown = ({ cartItems, history, setVisibility }: WithRouterCartInter
 
       
     </div>)
-    
+
 }
 
 
@@ -53,6 +53,7 @@ const mapStateToProps = (state: StateInterface) => {
 }
 
 const mapDispatchToProps = (dispatch: any) => ({
+  
   setVisibility: () => dispatch(setVisibility())
 
 
