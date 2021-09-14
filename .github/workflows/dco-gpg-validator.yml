@@ -8,7 +8,6 @@ jobs:
   verification:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
       - uses: hectorcustodio/dco-check-action@v2.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
