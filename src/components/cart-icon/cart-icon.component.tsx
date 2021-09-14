@@ -22,8 +22,6 @@ const CartIcon = ({ setVisibility, itemCount }: CartIconInterface) => (
 
 const mapStateToProps = (state: StateInterface) => {
   return {
-
-
     itemCount: selectCartItemsCount(state)
   }
 }
