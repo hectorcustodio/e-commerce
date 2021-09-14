@@ -35,7 +35,7 @@ const CartDropdown = ({ cartItems, history, setVisibility }: WithRouterCartInter
 
         history.push('/checkout')
 
-        
+
         setVisibility()
       }}>GO TO CHECKOUT</FormButton>
 
@@ -44,6 +44,7 @@ const CartDropdown = ({ cartItems, history, setVisibility }: WithRouterCartInter
 }
 
 const mapStateToProps = (state: StateInterface) => {
+  
   return { cartItems: selectCartItems(state) }
 
 }
