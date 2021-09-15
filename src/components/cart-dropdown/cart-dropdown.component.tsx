@@ -18,6 +18,8 @@ const CartDropdown = ({ cartItems, history, setVisibility }: WithRouterCartInter
     <div className='cart-dropdown'>
       
       <div className='cart-items'>
+
+        
         {
           cartItems.length > 0 ?
             cartItems && cartItems.map((cartItem: Item) => <div key={cartItem.id}><CartItem  {...cartItem} /></div>) :
@@ -29,7 +31,7 @@ const CartDropdown = ({ cartItems, history, setVisibility }: WithRouterCartInter
 
         history.push('/checkout')
 
-        
+
         setVisibility()
       }}>GO TO CHECKOUT</FormButton>
       
