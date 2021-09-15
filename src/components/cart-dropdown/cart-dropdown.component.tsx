@@ -16,6 +16,8 @@ const CartDropdown = ({ cartItems, history, setVisibility }: WithRouterCartInter
   console.log(cartItems)
   return (
     <div className='cart-dropdown'>
+
+      
       
       <div className='cart-items'>
         {
@@ -44,7 +46,7 @@ const mapDispatchToProps = (dispatch: any) => ({
 
   setVisibility: () => dispatch(setVisibility())
 
-  
+
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CartDropdown))
