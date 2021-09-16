@@ -22,6 +22,7 @@ const CartDropdown = ({ cartItems, history, setVisibility }: WithRouterCartInter
         {
           cartItems.length > 0 ?
             cartItems && cartItems.map((cartItem: Item) => <div key={cartItem.id}><CartItem  {...cartItem} /></div>) :
+            
             <span className='empty-message'>Your cart is empty</span>
         }
       </div>
