@@ -38,12 +38,14 @@ class App extends React.Component<{ setCurrentUser: any, currentUser: any }, Rec
     return (
       <div>
         <Header />
-        
+
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route path='/shop' component={ShopPage} />
           <Route exact path='/signin' render={() => this.checkIfLogged()} />
           <Route exact path='/checkout' component={CheckoutPage} />
+
+          
         </Switch>
       </div>
     );
