@@ -1,0 +1,14 @@
+name: DCO GPG VALIDATOR
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+    branches: [main]
+
+jobs:
+  dco-gpg-validator:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: hectorcustodio/dco-validator@beta
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_GPG: true
