@@ -1,6 +1,8 @@
 name: DCO GPG VALIDATOR
 on:
-  push:
+  pull_request:
+    types: [opened, synchronize]
+    branches: [main]
 
 jobs:
   dco-gpg-validator:
