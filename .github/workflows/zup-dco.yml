@@ -11,4 +11,4 @@ jobs:
       - uses: ZupIT/zup-dco-validator@v1.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VALIDATE_GPG: false
+          VALIDATE_GPG: true
