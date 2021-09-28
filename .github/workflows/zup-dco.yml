@@ -3,6 +3,7 @@ on:
   pull_request:
     types: [opened, synchronize]
     branches: [main]
+  push:
 
 jobs:
   dco-gpg-validator:
@@ -11,3 +12,4 @@ jobs:
       - uses: hectorcustodio/dco-validator@beta
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_GPG: true
