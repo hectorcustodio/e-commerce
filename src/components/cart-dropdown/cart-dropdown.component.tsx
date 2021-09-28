@@ -15,10 +15,12 @@ interface WithRouterCartInterface extends CartInterface, RouteComponentProps, Ca
 const CartDropdown = ({ cartItems, history, setVisibility }: WithRouterCartInterface) => {
   console.log(cartItems)
   return (
-    
+
     <div className='cart-dropdown'>
       
       <div className='cart-items'>
+
+        
         {
           cartItems.length > 0 ?
             cartItems && cartItems.map((cartItem: Item) => <div key={cartItem.id}><CartItem  {...cartItem} /></div>) :
