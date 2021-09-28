@@ -1,8 +1,5 @@
 name: DCO GPG VALIDATOR
 on:
-  pull_request:
-    types: [opened, synchronize]
-    branches: [main]
   push:
 
 jobs:
