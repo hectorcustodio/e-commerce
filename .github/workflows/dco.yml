@@ -4,8 +4,6 @@ on:
     types: [opened, synchronize]
     branches: [main]
   push:
-permissions:
-  read-all
 
 jobs:
   dco-gpg-validator:
