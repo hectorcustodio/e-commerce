@@ -14,4 +14,4 @@ jobs:
       - uses: hectorcustodio/dco-validator@beta
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VALIDATE_GPG: true
+          VALIDATE_GPG: false
