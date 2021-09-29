@@ -30,6 +30,8 @@ const mapStateToProps = (state: StateInterface) => {
 
 const mapDispatchToProps = (dispatch: any) => ({
 
+  
+
   setVisibility: () => dispatch(setVisibility())
 })
 
