@@ -25,12 +25,14 @@ const mapStateToProps = (state: StateInterface) => {
 
 
     itemCount: selectCartItemsCount(state)
+
+    
   }
 }
 
 const mapDispatchToProps = (dispatch: any) => ({
 
-  
+
 
   setVisibility: () => dispatch(setVisibility())
 })
