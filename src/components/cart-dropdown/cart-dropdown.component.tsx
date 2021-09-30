@@ -28,6 +28,8 @@ const CartDropdown = ({ cartItems, history, setVisibility }: WithRouterCartInter
       <FormButton onClick={() => {
 
         history.push('/checkout')
+
+        
         setVisibility()
       }}>GO TO CHECKOUT</FormButton>
       
