@@ -43,6 +43,9 @@ const mapDispatchToProps = (dispatch: any) => ({
 
   
   setVisibility: () => dispatch(setVisibility())
+
+
+  
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CartDropdown))
