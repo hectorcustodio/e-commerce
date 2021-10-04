@@ -12,4 +12,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_GPG: true
-          SKIP_AUTHORS: "Hector Custódio, Hector"
