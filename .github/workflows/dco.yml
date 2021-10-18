@@ -1,6 +1,6 @@
 name: DCO GPG VALIDATOR
 on:
-  push
+  [push, pull_request]
 
 jobs:
   dco-gpg-validator:
