@@ -6,7 +6,7 @@ jobs:
   dco-gpg-validator:
     runs-on: ubuntu-latest
     steps:
-      - uses: hectorcustodio/dco-validator@beta
+      - uses: ZupIT/zup-dco-validator@beta
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_GPG: true
