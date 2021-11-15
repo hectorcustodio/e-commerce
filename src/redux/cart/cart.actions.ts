@@ -14,6 +14,14 @@ export const addItem = (item: any) => {
   }
 }
 
+export const clearItem = (item: Item) => {
+  
+  return {
+    type: CartActionTypes.CLEAR_ITEM,
+    payload: item
+  }
+}
+
 export const removeItem = (item: Item) => {
   
   return {
