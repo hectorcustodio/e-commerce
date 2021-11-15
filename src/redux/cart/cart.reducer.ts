@@ -2,10 +2,10 @@
 
 import { CartInterface } from "../../model"
 import CartActionTypes from "./cart.types"
-import { addItemToCart, removeItemFromCart } from "./cart.utils"
+import { addItemToCart, clearItem, removeItem } from "./cart.utils"
 const INITIAL_STATE: CartInterface = {
 
-  
+
   visible: true,
   cartItems: []
 }
@@ -17,17 +17,22 @@ const cartReducer = (state: CartInterface = INITIAL_STATE, action: any) => {
       return {
         ...state,
         visible: !state.visible
-        
+
       }
     case CartActionTypes.ADD_ITEM:
       return {
         ...state,
         cartItems: addItemToCart(state.cartItems, action.payload)
       }
-    case CartActionTypes.REMOVE_ITEM:
-      return{
+    case CartActionTypes.CLEAR_ITEM:
+      return {
         ...state,
-        cartItems: removeItemFromCart(state.cartItems, action.payload)
+        cartItems: clearItem(state.cartItems, action.payload)
+      }
+    case CartActionTypes.REMOVE_ITEM:
+      return {
+        ...state,
+        cartItems: removeItem(state.cartItems, action.payload)
       }
     default:
       return state
