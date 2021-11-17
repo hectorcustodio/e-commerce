@@ -10,5 +10,16 @@ jobs:
     runs-on: ubuntu-latest
    
     steps:
-      - run: docker run -e GITHUB_AUTH_TOKEN=${{ secrets.GITHUB_TOKEN }} gcr.io/openssf/scorecard:stable --show-details --repo=${{ github.repository }} --format=json > payload.json
+      - run: docker run -e GITHUB_AUTH_TOKEN=${{ secrets.GITHUB_TOKEN }} gcr.io/openssf/scorecard:stable --show-details --repo=${{ github.repository }} --format=json > scorecard.json
       - run: ls
+
+      - name: Upload File
+      - uses: actions/checkout@master
+      - uses: swimlane/s3-upload-file-action@master
+        with:
+          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
+          aws_bucket: ${{ secrets.AWS_S3_BUCKET }}
+          file_path: "./payload.json"
+          file_mime_type: "application/json"
+          dest_dir: "scorecard/beagle"
