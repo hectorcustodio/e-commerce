@@ -11,6 +11,12 @@ jobs:
    
     steps:
 
+      - name: Generate File name
+        run: |
+          IN="${{github.repository}}"
+          arrIN=(${IN//// })
+          echo ${arrIN[1]}
+
       - name: Generate Scorecard
         run: docker run -e GITHUB_AUTH_TOKEN=${{ secrets.GITHUB_TOKEN }} gcr.io/openssf/scorecard:stable --show-details --repo=${{ github.repository }} --format=json > scorecard.json
   
