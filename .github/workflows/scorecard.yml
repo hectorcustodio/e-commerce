@@ -15,10 +15,9 @@ jobs:
         run: |
           IN="${{github.repository}}"
           arrIN=(${IN//// })
-          echo ${arrIN[1]}
 
       - name: Generate Scorecard
-        run: docker run -e GITHUB_AUTH_TOKEN=${{ secrets.GITHUB_TOKEN }} gcr.io/openssf/scorecard:stable --show-details --repo=${{ github.repository }} --format=json > scorecard.json
+        run: docker run -e GITHUB_AUTH_TOKEN=${{ secrets.GITHUB_TOKEN }} gcr.io/openssf/scorecard:stable --show-details --repo=${{ github.repository }} --format=json > ${arrIN[1]}.json
   
       - name: Upload File
         uses: swimlane/s3-upload-file-action@main
@@ -26,6 +25,6 @@ jobs:
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
           aws_bucket: ${{ secrets.AWS_S3_BUCKET }}
-          file_path: "./scorecard.json"
+          file_path: "./${arrIN[1]}.json"
           file_mime_type: "application/json"
           dest_dir: "scorecard/beagle"
