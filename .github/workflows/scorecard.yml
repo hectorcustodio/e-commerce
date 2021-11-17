@@ -10,5 +10,5 @@ jobs:
     runs-on: ubuntu-latest
    
     steps:
-      - run: docker run -e GITHUB_AUTH_TOKEN=${{ secrets.GITHUB_TOKEN }} gcr.io/openssf/scorecard:stable --show-details --repo=${{ github.repository }} --format=json > "${{github.repository}}".json
+      - run: docker run -e GITHUB_AUTH_TOKEN=${{ secrets.GITHUB_TOKEN }} gcr.io/openssf/scorecard:stable --show-details --repo=${{ github.repository }} --format=json > payload.json
       - run: ls
