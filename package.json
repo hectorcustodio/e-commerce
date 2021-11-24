@@ -25,6 +25,10 @@
     "reselect": "^4.0.0",
     "typescript": "~3.7.2"
   },
+  "engines": {
+    "node": "14.x",
+    "yarn": "1.22.x"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
